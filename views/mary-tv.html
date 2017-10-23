@@ -1,0 +1,68 @@
+{{> header }}
+{{> navigation }}
+
+<!-- BANNER COMPONENT -->
+<div class="inner-banner">
+	<div class="inner-banner__item inner-banner__item--not-full">
+		<div class="inner-banner__image inner-banner__image--mary-tv"></div>
+		<div class="container inner-banner__content-01">
+			<div class="inner-banner__content-01-wrapper">
+				{{{mary-tv-banner.content}}}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- BANNER COMPONENT -->
+
+<div class="mary-tv">
+	<div class="container">
+		<h3 class="mary-tv__h3">I WANT YOU TO BE WEALTHY</h3>
+		<div class="divider mary-tv__divider">
+			<svg class="divider__svg" width="24" height="30" viewBox="0 0 24 30">
+				<g fill="#000">
+					<path d="M22.737.163a.765.765 0 0 0-.762.768V27.2l-9.525-9.575c-.02-.02-.044-.035-.064-.052a.75.75 0 0 0-1.13-.062L1.56 27.26V.932a.767.767 0 0 0-1.53 0v28.067c0 .426.342.77.765.77a.26.26 0 0 0 .052-.006c.02.003.039.006.06.006a.764.764 0 0 0 .539-.224l10.351-10.408 10.268 10.326a.752.752 0 0 0 .217.15.744.744 0 0 0 .456.156.765.765 0 0 0 .764-.77V.931a.765.765 0 0 0-.764-.768"/><path d="M4.888 18.665s.019-.006.032-.006c0 0 .023.006.036.006a.744.744 0 0 0 .53-.222l6.04-6.099 5.992 6.047c.05.058.112.095.173.132a.761.761 0 0 0 .436.142c.413 0 .747-.34.747-.755V.917a.75.75 0 0 0-.747-.754.75.75 0 0 0-.748.754V16.12l-5.256-5.303c-.014-.01-.023-.02-.035-.032-.014-.011-.024-.026-.034-.04a.745.745 0 0 0-1.057 0l-5.364 5.412V.917a.752.752 0 0 0-.745-.754.75.75 0 0 0-.748.754V17.91c0 .415.335.755.748.755"/>
+				</g>
+			</svg>
+		</div>
+		<div class="button-group mary-tv__buttons">
+			<a href="javascript:;" data-filter="all" class="button button--red"><span>All</span></a>
+			{{# categories}}
+			<a href="javascript:;" class="button button--gray" data-filter="{{slug}}"><span>{{title}}</span></a>
+			{{/ categories}}
+		</div>
+
+		<!-- LIST -->
+		<div class="mary-tv__list" style="justify-content: inherit">
+			{{# marytvs }}
+			<div class="card-02 mary-tv__list-item col-xs-12 col-sm-6 col-md-4 filter-item" data-category="{{category_filter}}">
+				<div class="card-02__wrapper">
+					<span class="wistia_embed wistia_async_{{metadata.video_id}} popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:320px;width:100%">&nbsp;</span>
+					<div class="card-02__title">{{title}}</div>
+				</div>
+			</div>
+			{{/ marytvs }}
+		</div>
+		<!-- LIST -->
+	</div>
+
+	<!-- BOX -->
+	<div class="mary-tv__box">
+		<div class="box-01 mary-tv__box-item" style="background: url(home/bg-box-01.jpg) no-repeat center / cover;">
+			<div class="box-01__wrapper">
+				<div class="box-01__date">{{mary-tv.metadata.event.formatedDate.fullMonth}} {{mary-tv.metadata.event.formatedDate.dayNum}} , {{mary-tv.metadata.event.formatedDate.year}} ({{mary-tv.metadata.event.formatedDate.fullDay}}) {{mary-tv.metadata.event.metadata.time}}</div>
+				<div class="box-01__title">{{mary-tv.metadata.event.title}}</div>
+				<div class="box-01__content">{{mary-tv.metadata.event.metadata.address}}</div>
+				<a href="calendar" class="button button--red"><span>I'd Like to Attend</span></a>
+			</div>
+		</div>
+		<div class="box-02 mary-tv__box-item">
+			<div class="box-02__wrapper">
+				{{{mary-tv.content}}}
+				<a href="/join" class="button button--black"><span>Join Us</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- BOX -->
+</div>
+{{> footer1}}
+{{> footer}}

@@ -1,0 +1,109 @@
+{{> header }}
+{{> navigation }}
+
+<!-- BANNER COMPONENT -->
+
+<div class="inner-banner">
+	<div class="inner-banner__item inner-banner__item--not-full">
+		<div class="inner-banner__image inner-banner__image--contact"></div>
+		<div class="container inner-banner__content-01">
+			<div class="inner-banner__content-01-wrapper">
+				<div class="inner-banner__content-01-title">GET IN TOUCH</div>
+				<div class="inner-banner__content-01-desc">Contact the Wealth Woman, book a speaking event, or join the team.</div>
+				<div class="button-group inner-banner__buttons">
+					<a href="/contact" class="button button--red"><span>Contact</span></a>
+					<a href="/book" class="button button--gray"><span>Book</span></a>
+					<a href="/join" class="button button--gray"><span>Join</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- BANNER COMPONENT -->
+<div class="contact">
+	<div class="container">
+		<h3 class="contact__h3">Contact Us</h3>
+		<div class="divider contact__divider">
+			<svg class="divider__svg" width="24" height="30" viewBox="0 0 24 30">
+				<g fill="#000">
+					<path d="M22.737.163a.765.765 0 0 0-.762.768V27.2l-9.525-9.575c-.02-.02-.044-.035-.064-.052a.75.75 0 0 0-1.13-.062L1.56 27.26V.932a.767.767 0 0 0-1.53 0v28.067c0 .426.342.77.765.77a.26.26 0 0 0 .052-.006c.02.003.039.006.06.006a.764.764 0 0 0 .539-.224l10.351-10.408 10.268 10.326a.752.752 0 0 0 .217.15.744.744 0 0 0 .456.156.765.765 0 0 0 .764-.77V.931a.765.765 0 0 0-.764-.768"/><path d="M4.888 18.665s.019-.006.032-.006c0 0 .023.006.036.006a.744.744 0 0 0 .53-.222l6.04-6.099 5.992 6.047c.05.058.112.095.173.132a.761.761 0 0 0 .436.142c.413 0 .747-.34.747-.755V.917a.75.75 0 0 0-.747-.754.75.75 0 0 0-.748.754V16.12l-5.256-5.303c-.014-.01-.023-.02-.035-.032-.014-.011-.024-.026-.034-.04a.745.745 0 0 0-1.057 0l-5.364 5.412V.917a.752.752 0 0 0-.745-.754.75.75 0 0 0-.748.754V17.91c0 .415.335.755.748.755"/>
+				</g>
+			</svg>
+		</div>
+		<div class="contact__content">If you would like to learn more about how the Wealth Woman can help you, please contact us, and we will reach out to you shortly.</div>
+		<!-- CONTACT FORM -->
+		<div class="contact__form">
+			<form id="contact-email" method="post" name="contact-email" action="" class="row">
+				<div class="col-xs-12 col-sm-6">
+					<div class="contact__form-field">
+						<label for="first-name">First Name<span>*</span></label>
+						<input type="text" name="firstName" id="first-name">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="contact__form-field">
+						<label for="last-name">Last Name<span>*</span></label>
+						<input type="text" name="lastName" id="last-name">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="contact__form-field">
+						<label for="phone">Phone<span>*</span></label>
+						<input type="tel" name="phone" id="phone">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="contact__form-field">
+						<label for="email">Email<span>*</span></label>
+						<input type="email" name="email" id="email">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="contact__form-field">
+						<label for="message">Message</label>
+						<textarea id="message" name="message"></textarea>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="g-recaptcha" data-sitekey="6Ldj1BsUAAAAAPT0uBgnxKqOML_yqixcERehMHYK"></div>
+				</div>
+				<div class="col-xs-12">
+					<div class="contact__message">
+						<span>*</span>All fields are required
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="contact__form-field contact__form-field--submit">
+						<button name="contact-email-submit" id="contact-email-submit" type="submit" class="button button--red"><span>Submit</span></button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- CONTACT FORM -->
+		<!-- LIST -->
+		<div class="pc__list row">
+			<div class="col-xs-12 col-sm-6 col-md-4 pc__list-item">
+				<div class="list-03">
+					<div class="list-03__label">Email</div>
+					<a href="mailto:info@wealthwoman.com" class="list-03__link">{{{contact-info.metadata.email}}}</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pc__list-item">
+				<div class="list-03">
+					<div class="list-03__label">Office</div>
+					<a href="https://goo.gl/maps/kSEog4vyYxj" target="_blank" class="list-03__link">{{{contact-info.metadata.office_address}}}</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pc__list-item">
+				<div class="list-03">
+					<div class="list-03__label">Phone</div>
+					<a href="tel:214.624.5630" class="list-03__link">{{{contact-info.metadata.phone}}}</a>
+				</div>
+			</div>
+		</div>
+		<!-- LIST -->
+	</div>
+</div>
+
+{{> footer1}}
+{{> footer}}

@@ -1,0 +1,140 @@
+{{> header }}
+{{> navigation }}
+
+<!-- BANNER COMPONENT -->
+<div class="inner-banner">
+	<div class="inner-banner__item">
+		<div class="inner-banner__image inner-banner__image--about"></div>
+		<div class="container inner-banner__item-wrapper">
+			{{{ww-difference.metadata.banner.content}}}
+		</div>
+	</div>
+
+	<div class="hero-banner__arrow arrow-js">
+		<svg width="28" height="43" viewBox="-1 -1 28 43">
+			<g fill="none" stroke="#FFF"><path d="M26 28L13 39.78 0 28M13 40V0"/></g>
+		</svg>
+	</div>
+</div>
+<!-- BANNER COMPONENT -->
+<div class="about" id="arrow-target">
+	<div class="container">
+		<h3 class="about__h3">BUILDING WEALTH &amp; PRESERVATION</h3>
+		<div class="divider about__divider">
+			<svg class="divider__svg" width="24" height="30" viewBox="0 0 24 30">
+				<g fill="#000">
+					<path d="M22.737.163a.765.765 0 0 0-.762.768V27.2l-9.525-9.575c-.02-.02-.044-.035-.064-.052a.75.75 0 0 0-1.13-.062L1.56 27.26V.932a.767.767 0 0 0-1.53 0v28.067c0 .426.342.77.765.77a.26.26 0 0 0 .052-.006c.02.003.039.006.06.006a.764.764 0 0 0 .539-.224l10.351-10.408 10.268 10.326a.752.752 0 0 0 .217.15.744.744 0 0 0 .456.156.765.765 0 0 0 .764-.77V.931a.765.765 0 0 0-.764-.768"/><path d="M4.888 18.665s.019-.006.032-.006c0 0 .023.006.036.006a.744.744 0 0 0 .53-.222l6.04-6.099 5.992 6.047c.05.058.112.095.173.132a.761.761 0 0 0 .436.142c.413 0 .747-.34.747-.755V.917a.75.75 0 0 0-.747-.754.75.75 0 0 0-.748.754V16.12l-5.256-5.303c-.014-.01-.023-.02-.035-.032-.014-.011-.024-.026-.034-.04a.745.745 0 0 0-1.057 0l-5.364 5.412V.917a.752.752 0 0 0-.745-.754.75.75 0 0 0-.748.754V17.91c0 .415.335.755.748.755"/>
+				</g>
+			</svg>
+		</div>
+		<!-- LIST -->
+		<div class="about__list">
+			{{# ww-difference.mapped_data }}
+				<div class="list-01 about__list-item">
+					<div class="list-01__title">
+						<span class="list-01__title-number">{{count}}.</span>
+						<span class="list-01__title-label">{{title}}</span>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-2">
+							<img src="{{linked_image.url}}">
+						</div>
+						<div class="col-xs-12 col-sm-8 col-md-10">
+							{{{value}}}
+						</div>
+					</div>
+				</div>
+			{{/ ww-difference.mapped_data}}
+
+			<div class="list-01 about__list-item">
+				<div class="list-01__title">
+					<span class="list-01__title-number">IV.</span>
+					<span class="list-01__title-label">I want you to be Smart Wealthy.</span>
+				</div>
+			</div>
+			<!-- LIST -->
+		</div>
+	</div>
+	<!-- ABOUT -->
+	<div class="about__mary">
+		<div class="container">
+			<h3 class="about__h3">MARY LYONS, THE WEALTH WOMAN</h3>
+			<div class="divider about__divider">
+				<svg class="divider__svg" width="24" height="30" viewBox="0 0 24 30">
+					<g fill="#000">
+						<path d="M22.737.163a.765.765 0 0 0-.762.768V27.2l-9.525-9.575c-.02-.02-.044-.035-.064-.052a.75.75 0 0 0-1.13-.062L1.56 27.26V.932a.767.767 0 0 0-1.53 0v28.067c0 .426.342.77.765.77a.26.26 0 0 0 .052-.006c.02.003.039.006.06.006a.764.764 0 0 0 .539-.224l10.351-10.408 10.268 10.326a.752.752 0 0 0 .217.15.744.744 0 0 0 .456.156.765.765 0 0 0 .764-.77V.931a.765.765 0 0 0-.764-.768"/><path d="M4.888 18.665s.019-.006.032-.006c0 0 .023.006.036.006a.744.744 0 0 0 .53-.222l6.04-6.099 5.992 6.047c.05.058.112.095.173.132a.761.761 0 0 0 .436.142c.413 0 .747-.34.747-.755V.917a.75.75 0 0 0-.747-.754.75.75 0 0 0-.748.754V16.12l-5.256-5.303c-.014-.01-.023-.02-.035-.032-.014-.011-.024-.026-.034-.04a.745.745 0 0 0-1.057 0l-5.364 5.412V.917a.752.752 0 0 0-.745-.754.75.75 0 0 0-.748.754V17.91c0 .415.335.755.748.755"/>
+					</g>
+				</svg>
+			</div>
+		</div>
+		<div class="profile">
+			<div class="profile__video">
+				<span class="wistia_embed wistia_async_{{ww-difference.metadata.video_id}} popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:100%;width:100%">&nbsp;</span>
+			</div>
+			<div class="profile__content">
+				<div class="profile__content-wrapper">
+					<div class="profile__content-title">Advisor. Speaker. Entrepreneur.</div>
+					{{{ww-difference.content}}
+					<a href="/contact" class="button"><span>Contact Mary</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ABOUT -->
+	<!-- DOWNLOAD -->
+	<div class="download">
+		<div class="container download__wrapper">
+			<div class="download__content">Below are downloadable resources about the Wealth Woman. If you are interested in learning more or are in need of other marketing assets for an upcoming speaking event, please <a href="/contact">contact</a> us.</div>
+			<div class="download__list row">
+				<div class="col-xs-12 col-sm-3 download__list-wrapper">
+					<div class="download__list-item">
+						<div class="download__list-item-title">Mary Lyon's Bio (Short)</div>
+						<a href="{{ww-difference.metadata.download_box_1.url}}" download class="download__list-item-button">
+							<span>Download</span>
+							<div class="download__list-item-button-arrow">
+								<svg width="21" height="12" viewBox="-1 -1 21 12"><g fill="none" fill-rule="evenodd" stroke="#FFF"><path d="M16.01.351l3.343 4.691-3.344 4.691M19.353 5.042H0"/></g></svg>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 download__list-wrapper">
+					<div class="download__list-item">
+						<div class="download__list-item-title">Mary Lyon's Bio (Long)</div>
+						<a href="{{ww-difference.metadata.download_box_2.url}}" target="_blank" download class="download__list-item-button">
+							<span>Download</span>
+							<div class="download__list-item-button-arrow">
+								<svg width="21" height="12" viewBox="-1 -1 21 12"><g fill="none" fill-rule="evenodd" stroke="#FFF"><path d="M16.01.351l3.343 4.691-3.344 4.691M19.353 5.042H0"/></g></svg>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 download__list-wrapper">
+					<div class="download__list-item">
+						<div class="download__list-item-title">The Science behind the Science</div>
+						<a href="{{ww-difference.metadata.download_box_3.url}}" download class="download__list-item-button">
+							<span>Download</span>
+							<div class="download__list-item-button-arrow">
+								<svg width="21" height="12" viewBox="-1 -1 21 12"><g fill="none" fill-rule="evenodd" stroke="#FFF"><path d="M16.01.351l3.343 4.691-3.344 4.691M19.353 5.042H0"/></g></svg>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 download__list-wrapper">
+					<div class="download__list-item">
+						<div class="download__list-item-title">One Page Brochure</div>
+						<a href="{{ww-difference.metadata.download_box_1.url}}" download class="download__list-item-button">
+							<span>Download</span>
+							<div class="download__list-item-button-arrow">
+								<svg width="21" height="12" viewBox="-1 -1 21 12"><g fill="none" fill-rule="evenodd" stroke="#FFF"><path d="M16.01.351l3.343 4.691-3.344 4.691M19.353 5.042H0"/></g></svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- DOWNLOAD -->
+</div>
+
+{{> footer1 }}
+{{> footer }}
