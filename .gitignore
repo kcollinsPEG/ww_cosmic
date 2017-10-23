@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+/.idea/
+/_windows/
+/*.xml
+node_modules/
+/inspection
