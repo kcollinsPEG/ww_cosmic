@@ -5,7 +5,7 @@ var joinTeam = (app) => {
 
   app.post('/join-us-email', function (req, res) {
     var toEmail='';
-    var cosmicCallUrl = "https://api.cosmicjs.com/v1/wealthwomantest/object/contact-info?pretty=true&hide_metafields=true";
+    var cosmicCallUrl = "https://api.cosmicjs.com/v1/wealth-woman/object/contact-info?pretty=true&hide_metafields=true";
     request(cosmicCallUrl,function(error,response,body) {
       body = JSON.parse(body);
       var contact_info=body.object.metadata.email;

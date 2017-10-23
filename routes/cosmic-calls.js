@@ -5,7 +5,7 @@ import dateFormat from 'dateformat'
 var config = {}
 
 config.bucket = {
-  slug: 'wealthwomantest',
+  slug: 'wealth-woman',
   read_key: '', // add read_key if added to your Cosmic JS bucket settings
   write_key: '' // add write_key if added to your Cosmic JS bucket settings
 }
