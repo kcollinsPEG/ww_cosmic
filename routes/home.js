@@ -11,6 +11,7 @@ var pages = {
     'policy': [{type: 'globals', list: [true]},{type: 'pages', list: [false , 'privacy-policy']}],
     'thank-you': [{type: 'globals', list: [true]}],
     'newsletter-popup': [{type: 'globals', list: [true]}],
+    'modernluxury': [{type: 'globals', list: [true]},{type: 'pages', list: [false , 'modernluxury']}],
 
 };
 
