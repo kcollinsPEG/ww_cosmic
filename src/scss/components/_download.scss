@@ -1,0 +1,133 @@
+.download {
+	background-image: url(../about/download.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 90px 0;
+	position: relative;
+
+	&::before {
+		content: "";
+		background-color: $brand;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0.9;
+	}
+
+	// download__wrapper
+	&__wrapper {
+		position: relative;
+		z-index: 100;
+	}
+
+	// download__content
+	&__content {
+		color: $white;
+		font-family: $georgia;
+		font-size: 24px;
+		margin-bottom: 60px;
+		text-align: center;
+
+		a {
+			font-style: italic;
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+
+	// download__list-wrapper
+	&__list-wrapper {
+		display: flex;
+	}
+
+	// download__list-item
+	&__list-item {
+		padding: 40px 20px;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+
+		&::before {
+			background-color: $black;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform: translateY(-98%);
+			transition: transform 0.5s;
+		}
+
+		&:hover::before {
+			transform: translateY(0);
+		}
+	}
+
+	// download__list-item-title
+	&__list-item-title {
+		color: $white;
+		font-family: $kaleko-bold;
+		margin-bottom: 40px;
+		position: relative;
+		z-index: 9;
+	}
+
+	// download__list-item-button
+	&__list-item-button {
+		color: $white;
+		font-family: $kaleko-bold;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 40px;
+		left: 20px;
+		z-index: 10;
+
+		&:link,
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
+			text-decoration: none;
+		}
+
+		span {
+			margin-right: 10px;
+		}
+
+		&:hover .download__list-item-button-arrow svg {
+			transform: translateX(-2px);
+		}
+	}
+
+	// download__list-item-button-arrow
+	&__list-item-button-arrow {
+		overflow: hidden;
+		flex: none;
+
+		svg {
+			display: block;
+			position: relative;
+			transform: translateX(-10px);
+			transition: transform 0.5s;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.download {
+		padding-bottom: 50px;
+		
+		// download__content
+		&__content {
+			margin-bottom: 90px;
+		}
+	}
+}

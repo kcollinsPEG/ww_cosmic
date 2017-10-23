@@ -1,0 +1,77 @@
+.mary-tv {
+	padding-top: 90px;
+
+	// mary-tv__h3
+	&__h3 {
+		font-size: 24px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	// mary-tv__divider
+	&__divider {
+		margin-bottom: 40px;
+	}
+
+	// mary-tv__buttons
+	&__buttons {
+		margin: 40px auto;
+	}
+
+	// mary-tv__list
+	&__list {
+		margin-bottom: 50px;
+		justify-content: center;
+	}
+
+	// mary-tv__list-item
+	&__list-item {
+		padding-bottom: 40px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.mary-tv {
+		// mary-tv__h3
+		&__h3 {
+			font-size: 36px;
+			margin-bottom: 60px;
+		}
+		
+		// mary-tv__divider
+		&__divider {
+			margin-bottom: 60px;
+		}
+
+		// mary-tv__list
+		&__list {
+			margin-bottom: 30px;
+			justify-content: center;
+		}
+
+		// mary-tv__list-item
+		&__list-item {
+			padding-bottom: 60px;
+		}
+		
+		// mary-tv__buttons
+		&__buttons {
+			margin: 60px auto 90px;
+		}
+	}	
+}
+
+@media screen and (min-width: 1200px) {
+	.mary-tv {
+		// mary-tv__box
+		&__box {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		// mary-tv__box-item
+		&__box-item {
+			width: 50%;
+		}
+	}
+}

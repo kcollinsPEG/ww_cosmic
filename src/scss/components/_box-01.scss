@@ -1,0 +1,50 @@
+.box-01 {
+	padding: 90px 20px;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+		display: block;
+		background-color: $black;
+		opacity: 0.75;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// box-01__wrapper
+	&__wrapper {
+		position: relative;
+		z-index: 100;
+	}
+
+	// box-01__date
+	&__date {
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	// box-01__title
+	&__title {
+		color: $brand;
+		font-size: 36px;
+		font-family: $georgia;
+		margin: 20px 0;
+	}
+
+	// box-01__content
+	&__content {
+		color: $white;
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.box-01 {
+		padding: 100px 80px;
+	}
+}

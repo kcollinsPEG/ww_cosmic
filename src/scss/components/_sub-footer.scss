@@ -1,0 +1,137 @@
+/**=======================================================
+ * SUB FOOTER COMPONENT
+ ========================================================*/
+.sub-footer {
+	// sub-footer__about
+	&__about {
+		background-color: $brand-color;
+		padding: 60px 0;
+	}
+
+	// sub-footer__about-title
+	&__about-title {
+		font-family: 'Nunito Sans', sans-serif;
+	}
+
+	// sub-footer__about-content
+	&__about-content {
+		font-family: 'Nunito Sans', sans-serif;
+
+		a {
+			color: #FFF;
+			font-family: Georgia, sans-serif;
+			font-style: italic;
+			font-weight: 700;
+		}
+	}
+
+	// sub-footer__wrapper
+	&__wrapper {
+		color: #FFF;
+	}
+
+	// sub-footer__about-svg
+	&__about-svg {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	// sub-footer__contact
+	&__contact {
+		background-image: url(../images/bg_footer_contact.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		color: #FFF;
+		padding: 60px 0;
+	}
+
+	// sub-footer__contact-title
+	&__contact-title {
+		margin-bottom: 40px;
+	}
+
+	// sub-footer__contact-list-link
+	&__contact-list-link {
+		color: #FFF;
+		word-break: break-word;
+	}
+
+	// sub-footer__contact-list-item
+	&__contact-list-item {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	// sub-footer__content-list-item-svg
+	&__content-list-item-svg {
+		width: 60px;
+		flex: none;
+	}
+
+	// sub-footer__contact-list-item-social
+	&__contact-list-item-social {
+		flex: 1;
+	}
+
+	// sub-footer__contact-social
+	&__contact-social {
+		display: flex;
+	}
+
+	// sub-footer__contact-social-svg
+	&__contact-social-svg {
+		width: 60px;
+		flex: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.sub-footer {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		// sub-footer__about
+		&__about {
+			width: 50%;
+			padding: 90px 40px;
+		}
+
+		// sub-footer__contact
+		&__contact {
+			width: 50%;
+			padding: 90px 40px;
+		}
+
+		// sub-footer__contact-wrapper
+		&__contact-wrapper {
+			position: relative;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.sub-footer {
+		// sub-footer__about
+		&__about {
+			width: 60%;
+		}
+
+		// sub-footer__contact
+		&__contact {
+			width: 40%;
+		}
+
+		// sub-footer__about-wrapper
+		&__about-wrapper {
+			display: flex;
+		}
+
+		// sub-footer__about-svg
+		&__about-svg {
+			flex: none;
+			margin-right: 40px;
+		}
+	}
+}

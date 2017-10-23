@@ -1,0 +1,76 @@
+/**=======================================================
+ * SUB FOOTER 02 COMPONENT
+ ========================================================*/
+.sub-footer-02 {
+	background-color: $brand-color;
+	padding: 60px 0;
+
+	// sub-footer-02__about
+	&__about {
+		color: #FFF;
+		margin-bottom: 60px;
+	}
+
+	// sub-footer-02__svg
+	&__svg {
+		margin-bottom: 30px;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 160px;
+		display: block;
+	}
+
+	// sub-footer-02__title
+	&__title {
+		color: #FFF;
+		font-family: 'Nunito Sans', sans-serif;
+		margin-bottom: 30px;
+	}
+
+	// sub-footer-02__contact-list-item
+	&__contact-list-item {
+		color: #FFF;
+		display: flex;
+		margin-bottom: 20px;
+
+		a {
+			color: #FFF;
+			word-break: break-word;
+		}
+	}
+
+	// sub-footer-02__contact-list-icon
+	&__contact-list-icon {
+		flex: none;
+		width: 60px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.sub-footer-02 {
+		padding: 90px 0;
+		
+		// sub-footer-02__svg
+		&__svg {
+			width: 100px;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.sub-footer-02 {
+		// sub-footer-02__about-wrapper
+		&__about-wrapper {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		// sub-footer-02__svg
+		&__svg {
+			flex: none;
+			width: 160px;
+			margin-right: 60px;
+			margin-bottom: 0;
+		}
+	}
+}

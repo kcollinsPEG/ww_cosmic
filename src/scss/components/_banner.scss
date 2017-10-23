@@ -1,0 +1,205 @@
+/**=======================================================
+ * BANNER COMPONENT
+ ========================================================*/
+.banner {
+	background-image: url(../images/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $brand-color;
+		opacity: 0.8;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+
+	// banner__content-svg
+	&__content-svg {
+		display: block;
+		width: 120px;
+		margin: 0 auto 30px;
+	}
+
+	// banner__wrapper
+	&__wrapper {
+		position: relative;
+		z-index: 100;
+		height: 100vh;
+	}
+
+	// banner__content
+	&__content {
+		padding: 0 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		max-width: 960px;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	// banner__content-links
+	&__content-links {
+		.button--white {
+			margin-bottom: 10px;
+		}
+	}
+
+	// banner__content-title
+	&__content-title {
+		color: #FFF;
+		font-size: 24px;
+		font-family: 'Nunito Sans', sans-serif;
+	}
+
+	// banner__images
+	&__images {
+		display: none;
+	}
+
+	// banner__scroll-icon
+	&__scroll-icon {
+		border: 1px solid #FFF;
+		border-radius: 5px;
+		padding: 10px;
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		transform: translateX(-50%);
+		z-index: 100;
+
+		svg {
+			display: block;
+		}
+	}
+
+	// banner__scroll-icon-wrapper
+	&__scroll-icon-wrapper {
+		overflow: hidden;
+
+		svg {
+			animation-name: icon-scroll;
+			animation-duration: 1.2s;
+			animation-iteration-count: infinite;
+			transform: translateY(-2px)
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.banner {
+		// banner__content-title
+		&__content-title {
+			font-size: 36px;
+		}
+
+		// banner__content-links
+		&__content-links {
+			display: flex;
+
+			.button--white {
+				margin-bottom: 0;
+				margin-right: 50px;
+			}
+		}
+
+		// banner__scroll-icon
+		&__scroll-icon {
+			bottom: 60px;
+		}
+
+		// banner__content-svg
+		&__content-svg {
+			display: block;
+			width: 190px;
+			margin-bottom: 60px;
+		}
+	}	
+}
+
+@media screen and (min-width: 992px) {
+	.banner {
+		// banner__wrapper
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		// banner__images
+		&__images {
+			display: block;
+			position: relative;
+			width: 100%;
+
+			.slick-dots {
+				position: absolute;
+				bottom: 40px;
+				left: 50px;
+				width: 100%;
+				height: 3px;
+				display: flex;
+
+				li {
+					margin-right: 10px;
+				}
+
+				button {
+					appearance: none;
+					background-color: #FFF;
+					border: 0;
+					outline: none;
+					padding: 0;
+					margin: 0;
+					width: 24px;
+					height: 3px;
+					overflow: hidden;
+					text-indent: -100px;
+				}
+
+				.slick-active button {
+					background-color: $brand-color;
+				}
+			}
+		}
+
+		// banner__images-item
+		&__images-item {
+			width: 700px;
+			height: 400px;
+		}
+
+		// banner__scroll-icon
+		&__scroll-icon {
+			bottom: 40px;
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.banner {
+		// banner__images-item
+		&__images-item {
+			width: 820px;
+			height: 480px;
+		}
+	}
+}
+
+@keyframes icon-scroll {
+	from { transform: translateY(-12px); }
+	to { transform: translateY(-2px); }
+}

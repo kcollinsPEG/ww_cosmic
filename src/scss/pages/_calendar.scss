@@ -1,0 +1,140 @@
+.calendar {
+	padding: 90px 0;
+
+	// calendar__h3
+	&__h3 {
+		font-size: 24px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	// calendar__divider
+	&__divider {
+		margin-bottom: 40px;
+	}
+
+	// calendar__list
+	&__list {
+		justify-content: center;
+	}
+
+	// calendar__list-item
+	&__list-item {
+		margin-top: 40px;
+		display: flex;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	// calendar__info-item
+	&__info-item {
+		display: flex;
+		margin: 10px 0;
+
+		svg {
+			flex: none;
+			margin-right: 10px;
+		}
+
+		span {
+			padding-top: 4px;
+			font-family: $georgia;
+		}
+	}
+
+	// calendar__content
+	&__content {
+		margin-top: 60px;
+	}
+
+	// calendar__buttons
+	&__buttons {
+		margin-top: 40px;
+
+		.button {
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+}
+
+// calendar--single
+.calendar--single {
+	padding-top: 120px;
+}
+
+@media screen and (min-width: 768px) {
+	.calendar {
+		// calendar__h3
+		&__h3 {
+			font-size: 36px;
+			margin-bottom: 60px;
+		}
+
+		// calendar__divider
+		&__divider {
+			margin-bottom: 60px;
+		}
+
+		// calendar__list-item
+		&__list-item {
+			&:first-child {
+				margin-top: 40px;
+			}
+		}
+
+		// calendar__info
+		&__info {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 880px;
+			margin: 0 auto;
+		}
+
+		// calendar__info-item
+		&__info-item {
+			width: 33.3333%;
+			padding: 0 10px;
+			margin: 0;
+		}
+
+		// calendar__content
+		&__content {
+			margin-top: 90px;
+			text-align: center;
+		}
+
+		// calendar__buttons
+		&__buttons {
+			display: flex;
+			margin-top: 90px;
+			justify-content: center;
+
+			.button {
+				margin: 0 20px;
+				width: auto;
+			}
+		}
+	}
+
+	// calendar--single
+	.calendar--single {
+		padding-top: 180px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.calendar {
+		// calendar__info-item
+		&__info-item {
+			width: 28%;
+
+			&:first-child {
+				width: 44%;
+			}
+		}
+	}
+}

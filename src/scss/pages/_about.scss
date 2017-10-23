@@ -1,0 +1,54 @@
+.about {
+	padding-top: 90px;
+
+	// about__h3
+	&__h3 {
+		font-size: 24px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	// about__divider
+	&__divider {
+		margin-bottom: 40px;
+	}
+
+	// about__list-item
+	&__list-item {
+		margin-bottom: 60px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// about__mary
+	&__mary {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.about {
+		// about__h3
+		&__h3 {
+			font-size: 36px;
+			margin-bottom: 60px;
+		}
+
+		// about__divider
+		&__divider {
+			margin-bottom: 90px;
+		}
+
+		// about__list-item
+		&__list-item {
+			margin-bottom: 80px;
+		}
+
+		// about__mary
+		&__mary {
+			margin-top: 90px;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+/**=======================================================
+ * LOGO COMPONENT
+ ========================================================*/
+.logo {
+	text-align: center;
+
+	// logo__list
+	&__list {
+		justify-content: center;
+	}
+
+	// logo__list-item
+	&__list-item {
+		margin: 20px 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: #FFF;
+	}
+
+	// logo__description
+	&__description {
+		margin-bottom: 40px;
+		font-family: Georgia, sans-serif;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.logo {
+		// logo__list-item
+		&__list-item {
+			background-color: #F1F1F2;
+			margin: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}

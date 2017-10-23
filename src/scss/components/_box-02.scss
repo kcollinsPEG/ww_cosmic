@@ -1,0 +1,25 @@
+.box-02 {
+	background-color: $brand;
+	color: $white;
+	padding: 90px 20px;
+	display: flex;
+	align-items: center;
+
+	// box-02__title
+	&__title {
+		font-size: 24px;
+		font-family: $georgia;
+		margin-bottom: 40px;
+	}
+
+	// box-02__content
+	&__content {
+		margin-bottom: 60px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.box-02 {
+		padding: 100px 80px;
+	}
+}

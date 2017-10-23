@@ -1,0 +1,70 @@
+.list-02 {
+	display: flex;
+
+	// list-02__number
+	// list-02__title
+	&__number,
+	&__title {
+		font-family: $georgia;
+		font-size: 24px;
+	}
+	
+	// list-02__number
+	&__number {
+		flex: none;
+		width: 60px;
+	}
+
+	// list-02__title
+	&__title {
+		color: $brand;
+		margin-bottom: 40px;
+	}
+
+	// list-02__line-t
+	&__line-t {
+		text-decoration: line-through;
+	}
+
+	// list-02__desc
+	&__desc {
+		margin-bottom: 40px;
+	}
+
+	// list-02__button
+	&__button {
+		display: flex;
+		align-items: center;
+		
+		&:active,
+		&:link,
+		&:visited,
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:hover .list-02__button-arrow svg {
+			transform: translateX(0);
+		}
+	}
+
+	// list-02__button-label
+	&__button-label {
+		color: $brand;
+		font-family: $kaleko-bold;
+		font-size: 12px;
+		margin-right: 10px;
+	}
+	
+	// list-02__button-arrow
+	&__button-arrow {
+		overflow: hidden;
+
+		svg {
+			display: block;
+			position: relative;
+			transform: translateX(-14px);
+			transition: transform 0.5s;
+		}
+	}
+}

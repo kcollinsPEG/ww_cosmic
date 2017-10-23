@@ -1,0 +1,57 @@
+.list-01 {
+	// list-01__title
+	&__title {
+		display: flex;
+		font-family: $georgia;
+		font-size: 24px;
+	}
+
+	// list-01__title-number
+	&__title-number {
+		flex: none;
+		margin-right: 30px;
+	}
+
+	// list-01__title-label
+	&__title-label {
+		color: $brand;
+	}
+
+	// list-01__svg
+	&__svg {
+		.animate {
+			stroke-dasharray: 6;
+			animation: dash 10s linear infinite;
+		}
+
+		.animate.reverse {
+			animation: dash-reverse 10s linear infinite;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.list-01 {
+		// list-01__title
+		&__title {
+			margin-bottom: 40px;
+		}
+
+		// list-01__svg
+		&__svg {
+			margin-top: 20px;
+		}
+	}
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: -100;
+	}
+}
+
+@keyframes dash-reverse {
+	to {
+		stroke-dashoffset: 100;
+	}
+}

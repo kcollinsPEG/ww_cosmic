@@ -1,0 +1,263 @@
+.navigation {
+	width: 100%;
+	height: 80px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: height 0.5s, background-color 0.5s;
+	z-index: 1000;
+	
+	// navigation.sticky
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $black;
+	}
+
+	// navigation__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+		position: relative;
+		z-index: 100;
+	}
+
+	// navigation__burger
+	&__burger {
+		display: block;
+		height: 22px;
+		width: 22px;
+		position: relative;
+
+		&-top,
+		&-mid,
+		&-bot {
+			position: absolute;
+			background-color: $white;
+			display: block;
+			height: 1px;
+			width: 22px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			transition: all 0.3s;
+		}
+
+		// navigation__burger-top
+		&-top {
+			transform: translate(-50%, -10px);
+		}
+
+		// navigation__burger-bot
+		&-bot {
+			transform: translate(-50%, 10px);
+		}
+	}
+
+	// navigation__logo
+	&__logo {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 36px;
+		height: 44px;
+		opacity: 1;
+		transition: opacity 0.5s, visibility 0.5s;
+	}
+
+	// navigation__logo-svg--full
+	&__logo--full {
+		visibility: hidden;
+		opacity: 0;
+		width: 255px;
+		height: 50px;
+	}
+
+	// navigation__logo-svg
+	&__logo-svg {
+		display: block;
+	}
+	
+	// navigation__logo-svg-g
+	&__logo-g {
+		fill: $white;
+	}
+
+	// navigation__menu
+	&__menu {
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: background-color 0.5s, opacity 0.5s;
+		opacity: 0;
+	}
+
+	// navigation__menu-wrapper
+	&__menu-wrapper {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	// navigation__menu-ul
+	&__menu-ul {
+		margin-bottom: 50px;
+		margin-top: 20px;
+	}
+
+	// navigation__menu-a
+	&__menu-a {
+		color: $white;
+		font-size: 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color 0.5s;
+
+		&:hover,
+		&:link,
+		&:visited,
+		&:active {
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: $brand;
+		}
+	}
+	
+	// navigation__menu-footer
+	&__menu-footer {
+		margin-bottom: 50px;
+	}
+
+	// navigation__menu-footer-a
+	&__menu-footer-a {
+		color: $white;
+	}
+
+	// navigation__menu-social
+	&__menu-social {
+		display: flex;
+	}
+
+	// navigation__menu-social-a
+	&__menu-social-a {
+		margin-right: 30px;
+
+		&:hover .navigation__menu-social-p {
+			fill: $brand;
+		}
+	}
+
+	// navigation__menu-social-svg
+	&__menu-svg {
+		display: block;
+	}
+
+	// navigation__menu-social-p
+	&__menu-social-p {
+		fill: $white;
+		transition: fill 0.5s;
+	}
+}
+
+// navigation.open
+.navigation.open {
+	background-color: $black;
+
+	.navigation__menu {
+		opacity: 1;
+	}
+
+	.navigation__burger {
+		.navigation__burger-mid {
+			opacity: 0;
+		}
+
+		.navigation__burger-top {
+			transform: translate(-50%, 0) rotate(45deg);
+		}
+
+		.navigation__burger-bot {
+			transform: translate(-50%, 0) rotate(-45deg);
+		}
+	}
+}
+
+// navigation--light.open
+// navigation--light.sticky
+.navigation--light.open,
+.navigation--light.sticky {
+	.navigation__burger {
+		span {
+			background-color: $white;
+		}
+	}
+
+	.navigation__logo-g {
+		fill: $white;
+	}
+}
+
+// navigation--light
+.navigation--light {
+	.navigation__burger {
+		span {
+			background-color: $black;
+		}
+	}
+
+	.navigation__logo-g {
+		fill: $black;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navigation {		
+		// navigation__menu-a
+		&__menu-a {
+			font-size: 48px;
+		}
+
+		// navigation__logo
+		&__logo {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		// navigation__logo--full
+		&__logo--full {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&.sticky {
+			.navigation__logo {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.navigation__logo--full {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.navigation {
+		// navigation__menu-a
+		&__menu-a {
+			font-size: 36px;
+		}
+	}
+}

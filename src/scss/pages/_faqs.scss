@@ -1,0 +1,76 @@
+.faqs {
+	background-color: $gray-ll;
+	padding: 120px 0 90px;
+
+	// faqs__h3
+	&__h3 {
+		font-size: 24px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	
+	// faqs__divider
+	&__divider {
+		margin-bottom: 40px;
+	}
+
+	// faqs__content
+	&__content {
+		max-width: 960px;
+		text-align: center;
+		margin: 0 auto 60px;
+		font-family: $georgia;
+		font-size: 24px;
+
+		a {
+			color: $brand;
+			font-weight: bold;
+			font-style: italic;
+		}
+	}
+
+	// faqs__buttons
+	&__buttons {
+		margin: 0 auto 60px;
+		max-width: 780px;
+	}
+
+	// faqs__list
+	&__list {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	// faqs__list-item
+	&__list-item {
+		margin-top: 20px;
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.faqs {
+		padding: 180px 0 90px;
+
+		// faqs__h3
+		&__h3 {
+			font-size: 36px;
+			margin-bottom: 60px;
+		}
+
+		// faqs__divider
+		&__divider {
+			margin-bottom: 60px;
+		}
+
+		// faqs__content
+		&__content {
+			margin-bottom: 90px;
+		}
+
+		// faqs__buttons
+		&__buttons {
+			margin-bottom: 90px;
+		}
+	}
+}

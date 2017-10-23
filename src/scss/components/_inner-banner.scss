@@ -1,0 +1,258 @@
+.inner-banner {
+	position: relative;
+
+	// inner-banner__item
+	&__item {
+		position: relative;
+		overflow: hidden;
+		height: 100vh;
+
+		&::before {
+			background-color: $black;
+			content: "";
+			display: block;
+			opacity: 0.15;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}
+	}
+
+	// inner-banner__image
+	&__image {
+		background-color: $brand;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		animation-name: zoom-hero;
+		animation-duration: 30s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: linear;
+	}
+
+	// inner-banner__image--about
+	&__image--about {
+		background-image: url(../banner/about-mobile.jpg);
+	}
+
+	// inner-banner__image--blog
+	&__image--blog {
+		background-image: url(../banner/blog-mobile.jpg);
+	}
+
+	// inner-banner__image--calendar
+	&__image--calendar {
+		background-image: url(../banner/calendar-mobile.jpg);
+	}
+
+	// inner-banner__image--mary-tv
+	&__image--mary-tv {
+		background-image: url(../banner/mary-tv-mobile.jpg);
+	}
+
+	// inner-banner__image--speaking
+	&__image--speaking {
+		background-image: url(../banner/speaking-mobile.jpg);
+	}
+
+	// inner-banner__image--contact
+	&__image--contact {
+		background-image: url(../banner/contact-mobile.jpg);
+	}
+
+	// inner-banner__item-wrapper
+	&__item-wrapper {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 200;
+	}
+
+	// inner-banner__title
+	&__title {
+		color: $white;
+		font-family: $kaleko-bold;
+		text-transform: uppercase;
+		font-size: 48px;
+		max-width: 420px;
+	}
+
+	// inner-banner__arrow
+	&__arrow {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 100;
+
+		svg {
+			display: block;
+		}
+	}
+
+	// inner-banner__content-01
+	&__content-01 {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 100;
+	}
+
+	// inner-banner__content-01-wrapper
+	&__content-01-wrapper {
+		max-width: 760px;
+	}
+
+	// inner-banner__content-01-title
+	&__content-01-title {
+		color: $brand;
+		font-size: 36px;
+		font-family: $kaleko-bold;
+		margin-bottom: 40px;
+	}
+
+	// inner-banner__content-01-desc
+	&__content-01-desc {
+		color: $white;
+		font-family: $georgia;
+		font-size: 18px;
+	}
+
+	// inner-banner__date
+	&__date {
+		background-color: $brand;
+		color: $white;
+		width: 88px;
+		height: 88px;
+		position: absolute;
+		bottom: -44px;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		z-index: 100;
+	}
+
+	// inner-banner__date-day
+	&__date-day {
+		display: block;
+		font-family: $georgia;
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 1;
+		padding-top: 10px;
+	}
+
+	// inner-banner__date-month
+	&__date-month {
+		display: block;
+		font-family: $kaleko-bold;
+		text-transform: uppercase;
+	}
+
+	// inner-banner__buttons
+	&__buttons {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.inner-banner {
+		// inner-banner__title
+		&__title {
+			font-size: 70px;
+		}
+
+		// inner-banner__content
+		&__content {
+			font-size: 24px;
+			margin: 40px 0 50px;
+		}
+
+		// inner-banner__arrow
+		&__arrow {
+			bottom: 50px;
+		}
+
+		// inner-banner__item--not-full
+		&__item--not-full {
+			height: 560px;
+		}
+
+		// inner-banner__content-01-title
+		&__content-01-title {
+			font-size: 48px;
+		}
+
+		// inner-banner__content-01-desc
+		&__content-01-desc {
+			font-size: 24px;
+		}
+
+		// inner-banner__buttons
+		&__buttons.button-group {
+			display: flex;
+			margin-top: 60px;
+			justify-content: flex-start;
+
+			.button {
+				width: auto;
+				margin-right: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.inner-banner {
+		// inner-banner__image--about
+		&__image--about {
+			background-image: url(../banner/about.jpg);
+		}
+
+		// inner-banner__image--blog
+		&__image--blog {
+			background-image: url(../banner/blog.jpg);
+		}
+
+		// inner-banner__image--calendar
+		&__image--calendar {
+			background-image: url(../banner/calendar.jpg);
+		}
+
+		// inner-banner__image--mary-tv
+		&__image--mary-tv {
+			background-image: url(../banner/mary-tv.jpg);
+		}
+
+		// inner-banner__image--speaking
+		&__image--speaking {
+			background-image: url(../banner/speaking.jpg);
+		}
+
+		// inner-banner__image--contact
+		&__image--contact {
+			background-image: url(../banner/contact.jpg);
+		}
+
+		// inner-banner__item
+		&__item {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+@keyframes zoom-banner {
+	from { transform: scale(1); }
+	to { transform: scale(1.15); }
+}

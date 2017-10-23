@@ -1,0 +1,33 @@
+/**=======================================================
+ * PRIVACY PAGE
+ ========================================================*/
+.privacy {
+	background-color: #F1F1F2;
+	padding: 90px 0;
+
+	h2 {
+		color: #9B9B9B;
+		font-size: 24px;
+		font-family: Georgia, sans-serif;
+		margin: 60px 0 20px;
+	}
+
+	h4 {
+		color: $brand-color;
+		font-family: 'Nunito Sans', sans-serif;
+		text-transform: uppercase;
+		margin: 30px 0 20px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.privacy {
+		padding: 120px 0 90px;
+	}	
+}
+
+@media screen and (min-width: 992px) {
+	.privacy {
+		padding: 180px 0 90px;
+	}	
+}

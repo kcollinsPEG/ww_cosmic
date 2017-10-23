@@ -1,0 +1,92 @@
+/**=======================================================
+ * CONTACT FORM COMPONENT
+ ========================================================*/
+.contact-form {
+	// contact-form__title
+	&__title {
+		color: $brand-color;
+		font-size: 24px;
+		margin-bottom: 10px;
+		font-family: 'Nunito Sans', sans-serif;
+	}
+
+	// contact-form__wrapper
+	&__wrapper {
+		text-align: center;
+		margin-bottom: 40px;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 640px;
+
+		.divider {
+			margin: 0 auto;
+		}
+	}
+
+	// contact-form__content
+	&__content {
+		margin-top: 20px;
+	}
+
+	// contact-form__field
+	&__field {
+		margin-top: 20px;
+
+		label {
+			color: #9B9B9B;
+			display: block;
+			font-size: 14px;
+			font-family: 'Georgia', sans-serif;
+			font-style: italic;
+			margin-bottom: 10px;
+
+			span {
+				color: $brand-color;
+			}
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="submit"],
+		textarea {
+			border-radius: 0;
+			font-size: 16px;
+			appearance: none;
+			border: 1px solid #E6E7E8;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			width: 100%;
+			padding: 12px;
+		}
+
+		textarea {
+			height: 200px;
+			resize: none;
+		}
+
+		input[type="submit"] {
+			background-color: $brand-color;
+			cursor: pointer;
+			color: #FFF;
+			font-size: 16px;
+			font-weight: 700;
+			padding: 10px 40px;
+			margin-top: 14px;
+		}
+
+		.error {
+			color: #9B9B9B;
+			font-size: 14px;
+			font-family: 'Georgia', sans-serif;
+			font-style: italic;
+		}
+	}
+
+	// contact-form__field.submit
+	&__field.submit {
+		text-align: center;
+	}
+}

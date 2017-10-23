@@ -1,0 +1,111 @@
+.card-01 {
+	display: flex;
+
+	// card-01__wrapper
+	&__wrapper {
+		background-color: $white;
+		position: relative;
+
+		&:hover .card-01__image {
+			transform: scale(1.15);
+		}
+	}
+
+	// card-01__content-wrapper
+	&__content-wrapper {
+		border-top: 1px solid $brand;
+		padding: 40px;
+	}
+
+	// card-01__date
+	&__date {
+		background-color: $brand;
+		color: $white;
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		text-align: center;
+		padding-top: 6px;
+		z-index: 100;
+	}
+
+	// card-01__date-day
+	&__date-day {
+		display: block;
+		font-size: 24px;
+		font-family: $georgia;
+		font-weight: bold;
+		line-height: 1.2;
+	}
+
+	// card-01__date-month
+	&__date-month {
+		display: block;
+		font-size: 12px;
+		font-family: $kaleko-bold;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+	// card-01__image-wrapper
+	&__image-wrapper {
+		display: block;
+		overflow: hidden;
+	}
+
+	// card-01__image
+	&__image {
+		display: block;
+		transition: transform 0.5s;
+		transform: scale(1.05);
+		-webkit-backface-visibility: hidden;
+	}
+
+	// card-01__content
+	&__content {
+		font-size: 24px;
+		font-family: $georgia;
+		padding-bottom: 40px;
+	}
+
+	// card-01__button
+	&__button {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 40px;
+		left: 40px;
+		
+		&:active,
+		&:link,
+		&:visited,
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:hover .card-01__button-arrow svg {
+			transform: translateX(0);
+		}
+	}
+
+	// card-01__button-label
+	&__button-label {
+		color: $brand;
+		font-family: $kaleko-bold;
+		font-size: 12px;
+		margin-right: 10px;
+	}
+	
+	// card-01__button-arrow
+	&__button-arrow {
+		overflow: hidden;
+
+		svg {
+			display: block;
+			transform: translateX(-14px);
+			transition: transform 0.5s;
+		}
+	}
+}

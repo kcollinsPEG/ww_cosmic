@@ -1,0 +1,57 @@
+.list-03 {
+	border-top: 5px solid $brand;
+	width: 100%;
+	padding: 30px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		background-color: $brand;
+		content: "";
+		display: block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateY(-99%);
+		transition: transform 0.5s;
+	}
+
+	&:hover::before {
+		transform: translateY(0);
+	}
+
+	&:hover .list-03__label {
+		color: $white;
+	}
+
+	// list-03__label
+	&__label {
+		color: $brand;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		position: relative;
+		transition: color 0.5s;
+		z-index: 10;
+	}
+
+	// list-03__link
+	&__link {
+		color: $black;
+		font-family: $georgia;
+		font-size: 18px;
+		position: relative;
+		z-index: 10;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.list-03 {
+		// list-03__link
+		&__link {
+			font-size: 24px;
+		}
+	}
+}

@@ -1,0 +1,129 @@
+.button {
+	appearance: none;
+	border-radius: 2px;
+	background-color: $black;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-family: $kaleko-bold;
+	padding: 0 36px;
+	border: 0;
+	outline: none;
+	overflow: hidden;
+	line-height: 42px;
+	position: relative;
+	height: 42px;
+	text-align: center;
+	z-index: 1;
+	transition: background-color 0.8s;
+
+	&::before {
+		background-color: $brand;
+		content: "";
+		display: block;
+		transform: translate(-104%, -50%);
+		transition: transform 0.5s;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 120%;
+		height: 140%;
+		z-index: 0;
+	}
+
+	&:hover {
+		background-color: $brand;
+	}
+
+	&:hover::before {
+		transform: translate(-8%, -50%);
+	}
+
+	span {
+		position: relative;
+		z-index: 10;
+	}
+
+	&:hover,
+	&:link,
+	&:active,
+	&:visited {
+		text-decoration: none;
+	}
+
+	// button__label
+	&__label {
+		color: $white;
+	}
+
+	// button__icon
+	&__icon {
+		display: block;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	// button__icon-g
+	&__icon-g {
+		fill: $white;
+	}
+
+	// button--red
+	&--red {
+		background-color: $brand;
+		color: $white;
+
+		&::before {
+			background-color: $brand-accent;
+		}
+
+		&:hover {
+			background-color: $brand-accent;
+		}
+	}
+
+	// button--black
+	&--black {
+		background-color: $black;
+		color: $white;
+
+		&::before {
+			background-color: $brand-accent;
+		}
+
+		&:hover {
+			background-color: $brand-accent;
+		}
+	}
+
+	// button--gray
+	&--gray {
+		background-color: $gray-l;
+		color: $white;
+
+		&::before {
+			background-color: $brand;
+		}
+
+		&:hover {
+			background-color: $brand;
+		}
+	}
+
+	// button--letter
+	&--letter {
+		padding: 0 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.button {
+		// button--letter
+		&--letter {
+			padding: 0 36px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.faq {
+	background-color: $white;
+	overflow: hidden;
+	transition: height 0.3s;
+
+	// faq__title
+	&__title {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		font-family: $georgia;
+		padding: 20px;
+
+		svg {
+			flex: none;
+			margin-top: 8px;
+			margin-left: 10px;
+		}
+	}
+
+	// faq__content
+	&__content {
+		padding: 0 20px 20px 20px;
+
+		a {
+			color: $brand;
+			font-family: $kaleko-bold;
+		}
+	}
+}
+
+.faq.open {
+	.faq__title svg {
+		transform: rotate(180deg);
+	}
+}
